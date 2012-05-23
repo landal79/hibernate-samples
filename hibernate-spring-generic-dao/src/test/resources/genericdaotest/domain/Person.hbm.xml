@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="genericdaotest.domain">
+    <class name="Person">
+        <id name="id">
+            <generator class="native"></generator>
+        </id>
+        <property name="name" update="false"/>
+        <property name="weight"/>
+    </class>
+
+    <query name="Person.findByName">
+        <![CDATA[select p from Person p where p.name = ? ]]>
+    </query>
+
+    <query name="Person.findByWeight">
+        <![CDATA[select p from Person p where p.weight = :weight ]]>
+    </query>
+</hibernate-mapping>
