@@ -1,7 +1,7 @@
 hibernate-spring-generic-dao
 ==================================
 
-Maven project of 'Don't repeat the DAO!' code
+Maven project of 'Don't repeat the DAO!' article code
  
  References:
  
