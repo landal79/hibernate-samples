@@ -9,6 +9,7 @@
 	<description>hibernate-samples</description>
 	<modules>
 		<module>hibernate-sample-with-derbydb</module>
+		<module>hibernate-patterns</module>
 	</modules>
 
 	<build>
