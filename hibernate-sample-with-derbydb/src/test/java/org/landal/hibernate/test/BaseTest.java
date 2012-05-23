@@ -11,6 +11,7 @@ import org.junit.BeforeClass;
 public class BaseTest {
 
 	public static final String JAVA_JDBC_DS = "java:/jdbc/tutorialDS";
+	public static final String PERSISTENCE_UNIT = "tutorialPU";
 
 	@BeforeClass
 	public static void setUpClass() throws Exception {

@@ -14,8 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class UserTest extends BaseTest {
-
-	private static final String PERSISTENCE_UNIT = "tutorialPU";
+	
 	private static Logger logger = LoggerFactory.getLogger(UserTest.class);
 
 	@Test
