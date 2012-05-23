@@ -10,6 +10,7 @@
 	<modules>
 		<module>hibernate-sample-with-derbydb</module>
 		<module>hibernate-patterns</module>
+		<module>hibernate-spring-generic-dao</module>
 	</modules>
 
 	<build>
