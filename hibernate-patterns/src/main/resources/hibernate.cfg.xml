@@ -22,8 +22,7 @@
 
         <mapping class="com.sourceallies.payroll.domain.Address"/>
         <mapping class="com.sourceallies.payroll.domain.Employee"/>
-        <mapping class="com.sourceallies.payroll.domain.PayCheck"/>
-        <mapping class="com.sourceallies.payroll.domain.Employee"/>
+        <mapping class="com.sourceallies.payroll.domain.PayCheck"/>        
         <mapping class="com.sourceallies.payroll.domain.PayRate"/>
         <mapping class="com.sourceallies.payroll.domain.HourlyPayRate"/>
         <mapping class="com.sourceallies.payroll.domain.SalaryPayRate"/>

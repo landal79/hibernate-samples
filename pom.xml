@@ -11,6 +11,7 @@
 		<module>hibernate-sample-with-derbydb</module>
 		<module>hibernate-patterns</module>
 		<module>hibernate-spring-generic-dao</module>
+		<module>hibernate-jpa-generate-ddl</module>
 	</modules>
 
 	<build>
