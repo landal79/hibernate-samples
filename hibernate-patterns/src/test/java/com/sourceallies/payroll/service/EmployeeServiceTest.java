@@ -1,7 +1,15 @@
 package com.sourceallies.payroll.service;
 
+import static org.junit.Assert.*;
+
 import java.util.Calendar;
 import java.util.List;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.classic.Session;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import com.sourceallies.payroll.dao.HibernateEmployeeDao;
 import com.sourceallies.payroll.dao.PaginationInfo;
@@ -12,16 +20,13 @@ import com.sourceallies.payroll.domain.PayCheck;
 import com.sourceallies.payroll.domain.SalaryPayRate;
 import com.sourceallies.payroll.util.HibernateUtility;
 
-import junit.framework.TestCase;
-import org.hibernate.classic.Session;
-import org.hibernate.SessionFactory;
-
-public class EmployeeServiceTest extends TestCase {
+public class EmployeeServiceTest {
 
     private SessionFactory sessionFactory;
     private EmployeeService service = null;
     private HibernateEmployeeDao dao = null;
 
+    @Before
     public void setUp(){
         try {
             sessionFactory = HibernateUtility.getSessionFactory();
@@ -36,6 +41,7 @@ public class EmployeeServiceTest extends TestCase {
         }
     }
 
+    @After
     public void tearDown() {
         try {
             dao = null;
@@ -55,6 +61,7 @@ public class EmployeeServiceTest extends TestCase {
         sessionFactory.getCurrentSession().clear();
     }
 
+    @Test
     public void test1HourlyEmployeeCreation(){
 		HourlyPayRate hpr = new HourlyPayRate();
 		hpr.setJobRole("Programmer");
@@ -73,6 +80,7 @@ public class EmployeeServiceTest extends TestCase {
 		assertNotNull(employee.getUpdatedOn());
 	}
 
+    @Test
 	public void test2SalaryEmployeeCreation(){
 		
 		SalaryPayRate spr = new SalaryPayRate();
@@ -91,6 +99,7 @@ public class EmployeeServiceTest extends TestCase {
 		assertNotNull(employee.getUpdatedOn());
 	}
 	
+    @Test
 	public void test3PaycheckCreation(){
 		Calendar start = Calendar.getInstance();
 		start.add(Calendar.DAY_OF_YEAR, -21);
@@ -109,6 +118,7 @@ public class EmployeeServiceTest extends TestCase {
 		
 	}
 	
+    @Test
 	public void test4FetchStrategies() {
 		//This example should default to lazy loading and issue a query for 
 		//each employee's address
@@ -127,6 +137,7 @@ public class EmployeeServiceTest extends TestCase {
         checkCities(results);
     }
 	
+    @Test
 	public void test5Paging() {
 		PaginationInfo pageInfo = new PaginationInfo();
 		pageInfo.setFirstRow(0);
